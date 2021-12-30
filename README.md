@@ -23,7 +23,7 @@ Note: return `1` from other module mapper file.
 
 ## Mapper XML in my-module (overriding mapper xml)
 
-my-module/src/main/resources/override/com/example/demo/FooMapper.xml
+my-module/src/main/resources/com/example/demo/FooMapper.xml
 
 ```xml
 <!DOCTYPE mapper
@@ -43,7 +43,7 @@ Note: return `2` from my module mapper file.
 my-module/src/main/resources/application.properties
 
 ```properties
-mybatis.mapper-locations=classpath:/override/**/*Mapper.xml
+mybatis.mapper-locations=classpath:/com/example/demo/FooMapper.xml
 ```
 
 Build:
